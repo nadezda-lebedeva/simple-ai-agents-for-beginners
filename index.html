@@ -116,6 +116,23 @@
     background-clip: text;
   }
 
+  .hero-byline {
+    font-family: 'DM Mono', monospace;
+    font-size: 26px;
+    color: var(--muted);
+    margin-bottom: 32px;
+    letter-spacing: 0.02em;
+    animation: fadeUp 0.6s 0.15s ease both;
+  }
+
+  .byline-link {
+    color: var(--accent);
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+
+  .byline-link:hover { opacity: 0.8; }
+
   .hero-intro {
     font-size: 19px;
     color: var(--muted);
@@ -409,12 +426,13 @@
   .footer-links a {
     font-family: 'DM Mono', monospace;
     font-size: 12px;
-    color: var(--muted);
-    text-decoration: none;
-    transition: color 0.2s;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s, opacity 0.2s;
   }
 
-  .footer-links a:hover { color: var(--accent); }
+  .footer-links a:hover { opacity: 0.75; }
 
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -437,7 +455,7 @@
   <div class="hero">
     <div class="badge">
       <span class="badge-dot"></span>
-      Open source · Free to use · Beginner friendly
+      Hands-on guides · No coding required · Beginner friendly
     </div>
 
     <h1>
@@ -445,6 +463,8 @@
       <span class="gradient-text">AI Agent</span><br>
       starts here
     </h1>
+
+    <p class="hero-byline">By <a href="https://www.linkedin.com/in/nadezda-lebedeva/" target="_blank" class="byline-link">Nadezda Lebedeva</a></p>
 
     <p class="hero-intro">
       AI agents are no longer just for engineers with years of experience.<br>
@@ -593,10 +613,8 @@
   <footer>
     <p>// Simple AI Agents for Beginners · April 2026</p>
     <div class="footer-links">
-      <a href="https://github.com" target="_blank">GitHub</a>
-      <a href="https://claude.ai" target="_blank">Claude</a>
-      <a href="https://n8n.io" target="_blank">n8n</a>
-      <a href="https://make.com" target="_blank">Make</a>
+      <a href="https://www.linkedin.com/in/nadezda-lebedeva/" target="_blank">LinkedIn</a>
+      <a href="https://github.com/nadezda-lebedeva" target="_blank">GitHub</a>
     </div>
   </footer>
 
